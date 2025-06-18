@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop-a-Rone</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0074D9">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0074D9">
+</head>
+<body>
+  <!-- Welcome Screen -->
+  <div class="screen" id="welcome-screen">
+    <img src="shop-a-rone-logo.png" class="logo" alt="Shop-a-Rone Logo">
+    <h1>Welcome to Shop-a-Rone</h1>
+    <button class="btn" onclick="goTo('login')">Get Started</button>
+    <button class="btn light" onclick="goTo('signup')">Create Account</button>
+  </div>
+
+  <!-- Login Screen -->
+  <div class="screen hidden" id="login-screen">
+    <img src="shop-a-rone-logo.png" class="logo" alt="Shop-a-Rone Logo">
+    <h2>Log In</h2>
+    <input id="login-email" placeholder="Email" type="email">
+    <input id="login-pass" placeholder="Password" type="password">
+    <button class="btn" onclick="login()">Log In</button>
+    <p><a href="#" onclick="goTo('signup')">Don't have an account? Create one</a></p>
+    <p><a href="#" onclick="goTo('welcome')">&#8592; Back</a></p>
+  </div>
+
+  <!-- Signup Screen -->
+  <div class="screen hidden" id="signup-screen">
+    <img src="shop-a-rone-logo.png" class="logo" alt="Shop-a-Rone Logo">
+    <h2>Create Account</h2>
+    <input id="signup-email" placeholder="Email" type="email">
+    <input id="signup-pass" placeholder="Password" type="password">
+    <button class="btn" onclick="signup()">Sign Up</button>
+    <p><a href="#" onclick="goTo('login')">Already have an account? Log in</a></p>
+    <p><a href="#" onclick="goTo('welcome')">&#8592; Back</a></p>
+  </div>
+
+  <!-- Home Screen -->
+  <div class="screen hidden" id="home-screen">
+    <img src="shop-a-rone-logo.png" class="logo" alt="Shop-a-Rone Logo">
+    <h2>Hey!</h2>
+    <p>Welcome back.</p>
+    <button class="btn" onclick="goTo('list')">Build List</button>
+    <button class="btn" onclick="goTo('price')">Price Checker</button>
+    <button class="btn" onclick="goTo('notifications')">Notifications</button>
+    <button class="btn" onclick="goTo('badges')">Badges</button>
+    <button class="btn light" onclick="logout()">Log Out</button>
+  </div>
+
+  <!-- Additional feature screens placeholders -->
+  
+<!-- Shopping List Screen -->
+<div class="screen hidden" id="list-screen">
+  <img src="shop-a-rone-logo.png" class="logo" alt="Logo">
+  <h2>Your Shopping Lists</h2>
+
+  <!-- 1) Create / Delete Lists -->
+  <div class="list-controls">
+    <input id="new-list-name" type="text" placeholder="New list name…">
+    <button class="btn" onclick="createList()">Create List</button>
+    <button class="btn light" onclick="deleteList()">Delete List</button>
+  </div>
+
+  <!-- 2) Choose Current List -->
+  <div>
+    <label for="lists-select">Current list:</label>
+    <select id="lists-select" onchange="switchList()"></select>
+  </div>
+
+  <hr>
+
+  <!-- 3) Add Items to Current List -->
+  <div class="item-controls">
+    <input id="item-input" type="text" placeholder="Add item (e.g. Milk)">
+    <button class="btn" onclick="addItem()">Add</button>
+  </div>
+
+  <!-- 4) Show Items -->
+  <ul id="items-ul"></ul>
+
+  <p><a href="#" onclick="goTo('home')">&#8592; Back</a></p>
+</div>
+
+  <div class="screen hidden" id="price-screen"><h2>Price Checker</h2><p>Coming soon...</p><p><a href="#" onclick="goTo('home')">&#8592; Back</a></p></div>
+  <div class="screen hidden" id="notifications-screen"><h2>Notifications</h2><p>Coming soon...</p><p><a href="#" onclick="goTo('home')">&#8592; Back</a></p></div>
+  <div class="screen hidden" id="badges-screen"><h2>Badges</h2><p>Coming soon...</p><p><a href="#" onclick="goTo('home')">&#8592; Back</a></p></div>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .catch(err => console.error('SW registration failed:', err));
+    }
+  </script>
+
+<script>
+if('serviceWorker' in navigator) {
+ navigator.serviceWorker.register('service-worker.js')
+   .catch(e=>console.error(e));
+}
+</script>
+
+</body>
+</html
+  <!-- Price Checker Screen -->
+  <div class="screen" id="price-screen">
+    <img src="shop-a-rone-logo.png" class="logo" alt="Logo">
+    <h2>Price Checker</h2>
+    <input id="price-input" type="text" placeholder="Enter product (e.g. Milk)">
+    <button onclick="checkPrice()">Check Price</button>
+    <div id="price-results"></div>
+    <p><a href="#" onclick="goTo('home')">&#8592; Back</a></p>
+  </div>
+
+  >
