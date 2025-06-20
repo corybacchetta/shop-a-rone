@@ -115,17 +115,16 @@
     <p><strong>Store:</strong> Walmart Supercenter</p>
     <p><strong>Estimated Time:</strong> 22 minutes</p>
     <img src="https://via.placeholder.com/300x200?text=Aisle+Map" alt="Map">
-    <button onclick="goTo('checkout-screen')">Proceed to Checkout →</button>
-    <button onclick="goTo('home-screen')">← Home</button>
-  </div>
 
   <!-- Spark Shopper Screen -->
-  <div class="screen" id="spark-screen">
-    <h2>Spark Shopper View</h2>
-    <p><b>Order for:</b> <span id="sparkUser">You</span></p>
-    <ul id="sparkList"></ul>
-    <button onclick="goTo('home-screen')">← Home</button>
-  </div>
+<div class="screen" id="spark-screen">
+  <h2>Shop Mode: Spark Shopper</h2>
+  <!-- … spark-mode UI … -->
+
+  <!-- only spark shoppers ever see this: -->
+  <button onclick="goTo('payment-screen')">Payment Options</button>
+</div>
+
 
   <!-- Checkout Screen -->
   <div class="screen" id="checkout-screen">
