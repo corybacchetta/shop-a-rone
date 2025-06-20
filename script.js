@@ -1,6 +1,6 @@
 // Firebase config
 var firebaseConfig = {
-  apiKey: "AIzaSyBh58FvUbynyZ1o96gCKJfjSk_czch-41c",
+  AIzaSyBcsPF4DfG4AyQ-aPVFirGFbiKdKIeuToA
   authDomain: "shop-a-rone.firebaseapp.com",
   projectId: "shop-a-rone",
   storageBucket: "shop-a-rone.firebasestorage.app",
