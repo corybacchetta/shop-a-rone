@@ -106,15 +106,39 @@ function loadCloudList(uid) {
 
 // Price Checker
 function checkPrice() {
-  var product = document.getElementById('priceInput').value.trim();
-  var results = document.getElementById('priceResults');
-  if(product) {
-    results.innerHTML = '<p><strong>'+product+'</strong></p>'
-      +'<p>Walmart: $4.49</p>'
-      +'<p>Target: $4.99</p>'
-      +'<p>Kroger: $4.79</p>';
-  }
+  const query = document.getElementById('priceInput').value;
+  // …look up your prices (e.g. call an API or have a local map)…
+  const results = [
+    { store: 'Walmart', price: '$4.49' },
+    { store: 'Target',  price: '$4.99' },
+    { store: 'Kroger',  price: '$4.79' }
+  ];
+
+  const container = document.getElementById('priceResults');
+  container.innerHTML = ''; // clear old results
+
+  results.forEach(item => {
+    // 1) make a wrapper DIV
+    const row = document.createElement('div');
+    row.classList.add('price-row');
+
+    // 2) add the text
+    const txt = document.createElement('span');
+    txt.textContent = `${item.store}: ${item.price}`;
+    row.appendChild(txt);
+
+    // 3) add a delete button
+    const del = document.createElement('button');
+    del.textContent = 'Delete';
+    del.classList.add('btn', 'btn-sm', 'btn-danger');
+    del.addEventListener('click', () => row.remove());
+    row.appendChild(del);
+
+    // 4) stick it into your container
+    container.appendChild(row);
+  });
 }
+
 
 // Checkout
 function completeCheckout() {
