@@ -1,12 +1,12 @@
 // Firebase config
 var firebaseConfig = {
-  apiKey: "AIzaSyBcsPF4D1G4AyQ-aPVFirGFbikDKleuToA",
+  apiKey: "AIzaSyBcsPF4DfG4AyQ-aPVFirGFbiKdKIeuToA",
   authDomain: "shop-a-rone.firebaseapp.com",
   projectId: "shop-a-rone",
   storageBucket: "shop-a-rone.appspot.com",
-  messagingSenderId: "774594219128",
-  appId: "1:774594219128:web:f0b87f4ddb8a43f7e283d",
-  measurementId: "G-ZJXQGMWC98"
+  messagingSenderId: "774549121928",
+  appId: "1:774549121928:web:fbe87fa1db80c43f7e283d",
+  measurementId: "G-ZJXGMW298"
 };
 
 // Initialize Firebase
