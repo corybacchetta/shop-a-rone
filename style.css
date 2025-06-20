@@ -82,3 +82,21 @@ ul li {
 .list-controls input { flex: 1; padding: 6px; }
 .list-controls button { padding: 6px 8px; }
 .delete-list-btn { background: #FF4136; color: white; }
+/* Price Checker rows */
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.price-row span {
+  flex: 1;
+}
+
+.price-row button {
+  margin-left: 12px;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
