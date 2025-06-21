@@ -1,4 +1,4 @@
-const CACHE = "ShopARone-v1";
+const CACHE = "ShopARone-v2";
 const ASSETS = [
   "/",
   "/index.html",
