@@ -1,4 +1,22 @@
-const CACHE = 'app-cache-v1';
-const ASSETS = ['/', 'index.html', 'style.css', 'script.js', 'shop-a-rone-logo.png', 'manifest.json'];
-self.addEventListener('install', e => e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS))));
-self.addEventListener('fetch', e => e.respondWith(caches.match(e.request).then(r => r || fetch(e.request))));
+const CACHE = "ShopARone-v1";
+const ASSETS = [
+  "/",
+  "/index.html",
+  "/style.css",
+  "/script.js",
+  "/manifest.json",
+  "/icon-192.png",
+  "/icon-512.png"
+];
+
+self.addEventListener("install", event => {
+  event.waitUntil(
+    caches.open(CACHE).then(cache => cache.addAll(ASSETS))
+  );
+});
+
+self.addEventListener("fetch", event => {
+  event.respondWith(
+    caches.match(event.request).then(response => response || fetch(event.request))
+  );
+});
